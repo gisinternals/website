@@ -1,0 +1,618 @@
+@charset "iso-8859-1";
+#mainbody {
+	font-family: Tahoma, Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #999999; /*dk green*/;
+	color: #000000;
+	background-image: url('../images/back.png');
+	background-repeat: repeat-x;
+}
+/*===============indicates no border around any image ============*/
+body img {
+	border: 0px;
+	text-decoration: none;
+}
+/* ============ margins auto center the container on the page ==========*/
+#container {
+	margin: 10px auto 10px auto;
+	padding: 20px;
+	background-color: #7F7E9D;
+	width: 95%;
+	background-repeat: repeat;
+}
+/*=================== styles for top banner ========================*/
+
+/* sets style for page banner */
+
+#logoback {
+	background-position: left;
+	border: 1px solid #C0C0C0;
+	padding: 0px;
+	margin: 0px;
+	vertical-align : top;
+	background-image: url('../images/sky.gif');
+	background-repeat: repeat;
+	height: 200px;
+}
+#logoleft {
+	background-position: left;
+	padding: 0px;
+	margin: 0px;
+	vertical-align : top;
+	background-image: url('../images/banner.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+#logoright {
+	background-position: right;
+	float: right;
+	width: 400px;
+	height: 150px;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding: 0px;
+	color: #bd7b7c;
+	font-size: 90%;
+	font-weight: bold;
+	text-align: right;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background-image: url('../images/ban-title.png');
+}
+
+/*styles search button color*/
+
+.search {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+/*=================== styles for top menu ======================*/
+#topmenu {
+	margin: 5px 0px 5px 0px;
+	text-align: center;
+	font-size: .90em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: inherit;
+	border-top: 2px solid #242F24;
+	border-bottom: 2px solid #242F24;
+	height: 20px;
+	background-image: url('../images/menuback.png');
+	background-repeat: repeat-x;
+	border: 1px solid #C0C0C0;
+}
+#topmenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#topmenu li {
+	display: inline;
+	list-style-type: none;
+	padding: 0px;
+	padding-right: 1em;
+}
+#topmenu li a {
+	color: #FFFFFF;
+	font-family: Candara;
+	text-decoration: none;
+	text-shadow: #000000 0.2em 0.2em 3px;
+}
+#topmenu ul li a:hover{ /*hover state CSS*/
+color: white;
+background: black;
+}
+
+
+/*==============all site links==============*/
+a:link {
+	font-weight: bold;
+	color: #004145;
+	background: transparent;
+	text-decoration: underline;
+}
+a:visited {
+	font-weight: bold;
+	color: #660066;
+	background: transparent;
+	padding: 0px;
+	text-decoration: underline;
+}
+a:hover {
+	font-weight: bold;
+	text-decoration : none;
+	color: #000000;
+	background-color: #CCCCFF;
+}
+a:active {
+	font-weight: bold;
+	text-decoration : underline;
+	background: #BFDFE2;
+	color: #000000;
+}
+/*====================== styles for main content area =========================*/
+#sources{
+	margin: 10px 0px 30px 0px;
+	font-family: Verdana;
+	font-size: small;
+	color: #800000;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: underline;
+	background-image: url('../images/headerimg.png');
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	border-bottom-style: solid;
+	padding-bottom: 40px;
+}
+
+#sources2{
+	margin: 10px 0px 30px 0px;
+	font-family: Verdana;
+	font-size: small;
+	color: #800000;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#sources2 img {
+	vertical-align: middle;
+}
+
+#citation {
+	font-family: "Segoe UI";
+	font-size: small;
+	color: #669900;
+	font-style: italic;
+}
+
+#ordernotify {
+	font-family: "Segoe UI";
+	font-size: large;
+	color: #800000;
+	font-style: normal;
+	font-weight: bold;
+}
+
+
+#preamble {
+	font-family: "Segoe UI";
+	font-size: large;
+	color: #009900;
+	font-style: italic;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+#likebadge {
+	width: 200px;
+	height: 150px;
+	position: inherit;
+}
+
+
+
+a {
+	font-family: "Segoe UI";
+	font-size: medium;
+	color: #0033CC;
+	font-style: italic;
+}
+
+
+
+/*===========content area list items==============*/
+#content {
+	border: thin solid #4F2107;
+	margin-right: 190px;
+	margin-left: 210px;
+	padding: 5px;
+	text-align: left;
+	vertical-align: top;
+	background-color: #EAEAEA;
+	color: #4F2107;
+}
+#content ul li {
+	margin: 2px;
+	padding: 2px;
+}
+#content li li {
+	padding: 2px 0;
+}
+
+/* *****************************************************
+Navigation Bar - Right hand side 
+**************************************************** */
+#rightnav {
+	color: #000;
+	padding: 10px 10px 10px 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #003366;
+	float: right;
+	background-color: #EAEAEA;
+	width: 160px;
+}
+#rightnav .header{
+	margin: 10px;
+	background-color: #7F7E9D;
+	font: bold 13px Verdana;
+	color: white;
+/*bottom spacing between header and rest of content*/;	text-transform: uppercase;
+	padding: 7px 0 7px 10px;
+/*31px is left indentation of header text*/	text-shadow: #000000 0.2em 0.2em 3px;
+	background-image: url('../images/menuback.png');
+	background-repeat: repeat-x;
+}
+
+.header img {
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+	
+#rightnav p {
+	font-size: small;
+}
+
+#rightnav a {
+	font-size: small;
+}
+
+/* *****************************************************
+Navigation Bar - Left hand side 
+**************************************************** */
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.urbangreymenu{
+	border: 1px solid #C0C0C0;
+	width: 190px; /*width of menu*/;
+	float: left;
+	background-image: url('../images/leftback.png');
+	background-repeat: repeat-y;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+.urbangreymenu .headerbar{
+	background-position: 8px 6px;
+	font: bold 17px Candara;
+	color: #CCCCFF;
+	background: no-repeat 8px 6px;
+/*last 2 values are the x and y coordinates of bullet image*/	margin-bottom: 0; /*bottom spacing between header and rest of content*/;
+	text-transform: uppercase;
+	padding: 10px 0 0px 0px;
+/*31px is left indentation of header text*/
+	text-shadow: #000000 0.2em 0.2em 3px;
+	background-image: url('../images/menuheader.png');
+	height: 32px;
+}
+
+.urbangreymenu ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+margin-bottom: 0; /*bottom spacing between each UL and rest of content*/
+}
+
+.urbangreymenu img {
+	vertical-align: middle;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+
+.urbangreymenu ul li{
+	padding-left: 5px;
+}
+
+.urbangreymenu ul li a{
+	background-position: #FFFFCC;
+	font: italic 12px Candara;
+	color: #FFFFFF;
+	display: block;
+	padding: 5px 0;
+	line-height: 17px;
+	padding-left: 8px; /*link text is indented 8px*/;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: #000000 0.2em 0.2em 3px;
+}
+.urbangreymenu ul li a:visited{
+	color: #FFFFFF;
+}
+
+.urbangreymenu ul li a:hover{ /*hover state CSS*/
+color: white;
+background: black;
+}
+
+/*============== dropdown menu styles ===================*/
+
+.dropdown div
+{
+	position: absolute;
+	visibility: hidden;
+	margin: 0 10 0 10;
+	padding: 5px 10px;
+	border: 1px solid #4F2107;
+	background-color: #6699CC;
+}
+.dropdown div a
+{
+	position: relative;
+	display: block;
+	margin: 0 10 0 10;
+	padding: 5px 10px;
+	width: auto;
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	color: #2875DE;
+	font: 11px arial;
+	background-color: #6699CC;
+}
+
+/*============== Styles for footer ===================*/
+#footer {
+	border-top: 2px solid #242F24;
+	clear: both;
+	padding: 5px;
+	text-align: center;
+	font-family: Candara;
+	font-size: small;
+	margin-top: 5px;
+	border-top-color: #CCCCCC;
+	color: #FFFFFF;
+}
+#footer p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#footer a {
+	font-size: small;
+	color: #99CCFF;
+}
+
+/*================== general styles =================*/
+hr {
+	text-align: center;
+	background-color: #004145;
+	height: 1px;
+}
+#comment {
+	font-family: Candara;
+	color: #104793;
+}
+
+/* =================Styles for heading tags =============== */
+h1, h2, h3, h4 {
+	color: #666699; /*dk green*/;
+	background-color: inherit;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+	font-size: 1em;
+}
+h3 {
+	font-size: .9em;
+}
+h4 {
+	font-size: .9em;
+}
+/*================used to center anything==============*/
+.center {
+	text-align: center;
+}
+.justify {
+	text-align:justify;
+}
+
+/*================tables==============*/
+table
+{
+	border: 2px solid #9999FF;
+	margin-top: 1em;
+	margin-bottom: 0em;
+	background-color: #FFFFFF;
+}
+
+th
+{
+    padding: 2px 8px 2px 8px;
+    text-align: left;
+    background: #CCCCCC;
+    margin: .25em;
+    vertical-align: bottom;
+    font-family: Arial;
+    color: #000066;
+    font-weight: bold;
+}
+	
+tr
+{
+    border: thin solid #000000;
+    vertical-align: top;
+}
+
+td
+{
+    border: thin solid #C0C0C0;
+    padding: 2px 8px 2px 8px;
+    font-size: 80%;
+    margin: 0em;
+    vertical-align: middle;
+}
+
+td.title
+{
+    font-weight: bold;
+    color: #000000;
+}
+
+div.sample
+{
+    border-width: thin;
+    border-style: solid;
+    padding: 5px;
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: small;
+    color: #000000;
+    font-style: normal;
+}
+
+.topictitle
+{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: large;
+    color: #800000;
+}
+
+span.filename
+{
+    font-style: italic;
+    color: #FF0000;
+}
+
+.note
+{
+	color: red;
+	font-weight: normal;
+}
+/* ============floats images to right or left ============*/
+.imgrgt {
+	float: right;
+	padding: 7px;
+}
+.imglft {
+	float: left;
+	padding: 7px;
+}
+
+.smtxt {
+	font-size:small;
+}
+#publish td {
+	padding: 20px;
+	border-bottom-style: solid;
+	border-width: medium;
+	margin: 0px;
+	border-spacing: 0px;
+}
+#publish tr {
+	border-spacing: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+#poembody {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#sharebutton {
+	text-align: right;
+}
+
+#introsection {
+	border-color: #800000;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-bottom-style: solid;
+	padding-bottom: 20px;
+}
+.newssection {
+	margin: 10px;
+	border-bottom-style: solid;
+	padding-bottom: 10px;
+}
+
+.newssection a:hover {
+	font-weight:normal;
+	background-color: transparent;
+}
+
+.newssection a img:hover{
+	border: thin solid #3366CC;
+}
+
+.sponsorsection {
+	margin: 10px;
+	padding-bottom: 10px;
+}
+
+.sponsorsection a:hover {
+	font-weight:normal;
+	background-color: transparent;
+}
+
+.sponsorsection a img:hover{
+	border: thin solid #3366CC;
+}
+
+
+
+.news {
+	color: #000;
+	padding: 0px;
+	border: 1px solid #663300;
+	background-color: #FFFF99;
+}
+.logos {
+	padding: 10px 10px 0px 0px;
+	text-align: center;
+}
+
+.logos img {
+	margin-bottom: 5px;
+}
+#support {
+	padding: 5px 0px 0px 0px;
+	margin: 0px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #808000;
+}
+
+#poemdate {
+	font-size: small;
+	font-style: italic;
+	font-weight: bold;
+}
+.mailimage {
+	vertical-align: middle;
+	margin-right: 4px;
+	margin-left: 0px;
+}
+.menuimage {
+	vertical-align: middle;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+#linkref {
+	text-decoration: none;
+}
+
+#designedby {
+	font-size: x-small;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#currentmirror {
+	font-size: xx-small;
+	font-style: italic;
+	text-align: right;
+}

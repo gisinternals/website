@@ -1,0 +1,48 @@
+﻿
+
+h1.album {
+	height: 100px;
+	margin-bottom: 10px;
+    font-size: 48px;
+	text-align: center;
+	line-height: 96px;
+	color: #79c;
+}
+
+h2.album {
+	margin: .5em 0;
+	padding-top: .5em;
+	color: #79c;
+	font-size: x-large;
+}
+
+ul.album {
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	list-style-type: none;
+	overflow: hidden;
+	width: 100%;
+}
+
+ul.album li.album {
+	float: left;
+	width: 32%;
+	padding: 0 2% .5em 0;
+	margin: 0px 0px 0px 0px;
+}
+
+ul.album li:nth-child(3n) {
+	padding-right: 0;
+	margin-right: 0;
+}
+
+ul.album img {
+	max-width: 100%;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+

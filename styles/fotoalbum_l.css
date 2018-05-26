@@ -1,0 +1,16 @@
+﻿
+div#photocontent {
+	clear: left;
+	float: none;
+	width: auto;
+}
+
+ul.album li.album, ul.album li.album {
+	width: 15%;
+	padding: 0 .8% .5em .8%;
+}
+
+ul.album li.album:last-child {
+	padding-right: 0;
+}
+

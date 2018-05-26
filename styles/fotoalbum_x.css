@@ -1,0 +1,28 @@
+﻿
+h1.album {
+	height: auto;
+	margin-top: 5px;
+    font-size: 24px;
+	line-height: 1;
+	color: #34588c;
+	background: none;
+}
+
+div#photocontent {
+	float: none;
+	width: auto;
+}
+
+ul.album li.album, ul.album li.album:nth-child(3n) {
+	width: 47%;
+	padding: 0 3% .5em 0;
+}
+
+ul.album li.album:nth-child(2n) {
+	padding-right: 0;
+}
+
+ul.album li.album:nth-last-child(1),
+ul.album li.album:nth-last-child(2) {
+	display: none;
+}
