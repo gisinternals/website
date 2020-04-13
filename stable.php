@@ -16,12 +16,13 @@
 <meta content="hu-hu" http-equiv="Content-Language" />
 <meta content="General" name="rating" />
 <meta content="no" http-equiv="imagetoolbar" />
-<meta content="Copyright &copy; 2010, Hétvári Andrea, minden jog fenntartva" name="copyright" />
+<meta content="Copyright &copy; 2018, Tamas Szekeres, all rights reserved" name="copyright" />
 <!-- #BeginEditable "includestyles" -->
 <link href="styles/three-column-layout.css" rel="stylesheet" type="text/css" />
 <!-- #EndEditable -->
 <link rel="shortcut icon" href="favicon.ico"/>
 <!-- #BeginEditable "includescripts" -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="scripts/gisinternals.js"></script>
 <?php
 function GetMsRevInfo($id) {
@@ -133,9 +134,9 @@ function GetPackageHTML($fileName) {
 
 <div class="newssection">
 <h2>Events</h2>
-<a target="_blank" href="http://2018.foss4g.org/"><img width="130"  src="content-images/foss4g2018.png" alt="FOSS4G 2018"/></a>
+<a target="_blank" href="https://2020.europe.foss4g.org/"><img width="130"  src="content-images/foss4g-europe-2020.svg" alt="FOSS4G Europe 2020"/></a>
 <br/><br/>
-<a target="_blank" href="https://foss4g-europe.osgeopt.pt/"><img width="130" alt="" src="content-images/cropped-logo-foss4g-eu-recortado.png" /></a>
+<a target="_blank" href="https://2020.foss4g.org/"><img width="130" alt="FOSS4G 2020" src="content-images/FOS_HeaderLogo_2x.png" /></a>
 
 </div>
 <!--div class="newssection">
@@ -162,26 +163,30 @@ function GetPackageHTML($fileName) {
 
 
 </div>
-<!--webbot bot="Include" endspan i-checksum="39457" --><!-- #EndEditable --></div>
+<!--webbot bot="Include" endspan i-checksum="35518" --><!-- #EndEditable --></div>
 	<div id="content">
 		<!-- #BeginEditable "maincontent" -->
 		<h1>Stable Branches</h1>
 		<p>The following packages are compiled daily based on the MapServer Git and GDAL SVN latest stable branches. This is based on the stable branches containing all recent fixes added to the stable branch but not included in the latest release. It is recommended to use these packages mainly for testing purposes.</p>
+		
+		<h2>GDAL 3.0 and MapServer 7.4</h2>
 		<table>
 		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Date</th><th>Revisions</th></tr>
-		<tr><td>MSVC 2008</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1500-gdal-2-2-mapserver-7-0.zip">release-1500-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1500-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1500-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2008</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1500-x64-gdal-2-2-mapserver-7-0.zip">release-1500-x64-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1500-x64-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1500-x64-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2010</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1600-gdal-2-2-mapserver-7-0.zip">release-1600-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1600-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1600-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2010</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1600-x64-gdal-2-2-mapserver-7-0.zip">release-1600-x64-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1600-x64-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1600-x64-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2012</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1700-gdal-2-2-mapserver-7-0.zip">release-1700-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1700-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1700-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2012</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1700-x64-gdal-2-2-mapserver-7-0.zip">release-1700-x64-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1700-x64-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1700-x64-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2013</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1800-gdal-2-2-mapserver-7-0.zip">release-1800-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1800-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1800-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2013</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1800-x64-gdal-2-2-mapserver-7-0.zip">release-1800-x64-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1800-x64-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1800-x64-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2015</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1900-gdal-2-2-mapserver-7-0.zip">release-1900-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1900-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1900-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2015</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1900-x64-gdal-2-2-mapserver-7-0.zip">release-1900-x64-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1900-x64-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1900-x64-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2017</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1911-gdal-2-2-mapserver-7-0.zip">release-1911-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1911-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1911-gdal-2-2-mapserver-7-0.zip") ?></tr>
-		<tr><td>MSVC 2017</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1911-x64-gdal-2-2-mapserver-7-0.zip">release-1911-x64-gdal-2-2-mapserver-7-0</a></td><td><a href="packageinfo.php?file=release-1911-x64-gdal-2-2-mapserver-7-0.zip">information</a></td><?php echo GetPackageHTML("release-1911-x64-gdal-2-2-mapserver-7-0.zip") ?></tr>
+		<tr><td>MSVC 2015</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1900-gdal-3-0-mapserver-7-4.zip">release-1900-gdal-3-0-mapserver-7-4</a></td><td><a href="packageinfo.php?file=release-1900-gdal-3-0-mapserver-7-4.zip">information</a></td><?php echo GetPackageHTML("release-1900-gdal-3-0-mapserver-7-4.zip") ?></tr>
+		<tr><td>MSVC 2015</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1900-x64-gdal-3-0-mapserver-7-4.zip">release-1900-x64-gdal-3-0-mapserver-7-4</a></td><td><a href="packageinfo.php?file=release-1900-x64-gdal-3-0-mapserver-7-4.zip">information</a></td><?php echo GetPackageHTML("release-1900-x64-gdal-3-0-mapserver-7-4.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1911-gdal-3-0-mapserver-7-4.zip">release-1911-gdal-3-0-mapserver-7-4</a></td><td><a href="packageinfo.php?file=release-1911-gdal-3-0-mapserver-7-4.zip">information</a></td><?php echo GetPackageHTML("release-1911-gdal-3-0-mapserver-7-4.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1911-x64-gdal-3-0-mapserver-7-4.zip">release-1911-x64-gdal-3-0-mapserver-7-4</a></td><td><a href="packageinfo.php?file=release-1911-x64-gdal-3-0-mapserver-7-4.zip">information</a></td><?php echo GetPackageHTML("release-1911-x64-gdal-3-0-mapserver-7-4.zip") ?></tr>
 		</table>
+		
+		<h2>GDAL 2.4 and MapServer 7.4</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Date</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1900-gdal-2-4-mapserver-7-4.zip">release-1900-gdal-2-4-mapserver-7-4</a></td><td><a href="packageinfo.php?file=release-1900-gdal-2-4-mapserver-7-4.zip">information</a></td><?php echo GetPackageHTML("release-1900-gdal-2-4-mapserver-7-4.zip") ?></tr>
+		<tr><td>MSVC 2015</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1900-x64-gdal-2-4-mapserver-7-4.zip">release-1900-x64-gdal-2-4-mapserver-7-4</a></td><td><a href="packageinfo.php?file=release-1900-x64-gdal-2-4-mapserver-7-4.zip">information</a></td><?php echo GetPackageHTML("release-1900-x64-gdal-2-4-mapserver-7-4.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1911-gdal-2-4-mapserver-7-4.zip">release-1911-gdal-2-4-mapserver-7-4</a></td><td><a href="packageinfo.php?file=release-1911-gdal-2-4-mapserver-7-4.zip">information</a></td><?php echo GetPackageHTML("release-1911-gdal-2-4-mapserver-7-4.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1911-x64-gdal-2-4-mapserver-7-4.zip">release-1911-x64-gdal-2-4-mapserver-7-4</a></td><td><a href="packageinfo.php?file=release-1911-x64-gdal-2-4-mapserver-7-4.zip">information</a></td><?php echo GetPackageHTML("release-1911-x64-gdal-2-4-mapserver-7-4.zip") ?></tr>
+		</table>
+
 		<p><span class="note">Note:</span> The different compilers or architectures involve different CRT dependencies, therefore the binaries of the different packages are not interchangeable.</p>
 
 <p>The contents of the packages are provided under the terms of <a href="licensing.html">this license</a>. It is intended to give you permission to do whatever you want with the files: download, modify, redistribute as you please, including building proprietary commercial software, no permission from <a href="myprofile.html">Tamas Szekeres</a> is required. Some external libraries which can be optionally used by GDAL and MapServer (provided as plugins) are under radically different licenses, you <strong>MUST obtain valid licenses</strong> for each of these dependent libraries.</p>
