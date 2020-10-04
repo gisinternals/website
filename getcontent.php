@@ -36,7 +36,7 @@ function ProcessFilelist() {
 	if (isset($_GET['file']) or die ("Missing file parameter")) {
 	    $fileName = $_GET['file'];
 		$dirName = substr($fileName, 0, strrpos($fileName, "."));
-		$baseUrl = "http://".$_SERVER['HTTP_HOST']."/";
+		$baseUrl = "https://".$_SERVER['HTTP_HOST']."/";
 		echo "<p>Available downloads (<b>".$dirName."</b>):</p><table>";
 		echo "<tr><th>File name</th><th>File date</th><th>Size</th><th>Description</th>";
 		if (file_exists($sdkRoot."downloads/".$fileName)) {
