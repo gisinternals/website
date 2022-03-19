@@ -207,7 +207,7 @@ a {
 /*===========content area list items==============*/
 #content {
 	border: thin solid #4F2107;
-	margin-right: 190px;
+	/*margin-right: 190px;*/
 	margin-left: 210px;
 	padding: 5px;
 	text-align: left;
@@ -234,6 +234,7 @@ Navigation Bar - Right hand side
 	float: right;
 	background-color: #EAEAEA;
 	width: 160px;
+	display: none;
 }
 #rightnav .header{
 	margin: 10px;

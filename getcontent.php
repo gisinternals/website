@@ -36,7 +36,7 @@ function ProcessFilelist() {
 	if (isset($_GET['file']) or die ("Missing file parameter")) {
 	    $fileName = $_GET['file'];
 		$dirName = substr($fileName, 0, strrpos($fileName, "."));
-		$baseUrl = "http://".$_SERVER['HTTP_HOST']."/";
+		$baseUrl = "https://".$_SERVER['HTTP_HOST']."/";
 		echo "<p>Available downloads (<b>".$dirName."</b>):</p><table>";
 		echo "<tr><th>File name</th><th>File date</th><th>Size</th><th>Description</th>";
 		if (file_exists($sdkRoot."downloads/".$fileName)) {
@@ -67,16 +67,16 @@ function ProcessFilelist() {
 	}
 }
 function ProcessPackageinfo() { 
-	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"http://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
+	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
 }
 function ProcessChangeLog() { 
-	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"http://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
+	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
 }
 function ProcessBuildLog() { 
-	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"http://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
+	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
 }
 function ProcessBuildStatus() { 
-	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"http://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
+	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
 }
 function GetRemote($url) { 
 	$result = file_get_contents($url);
@@ -86,13 +86,13 @@ function GetRemote($url) {
 }
 
 function ProcessArchive() { 
-	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"http://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
+	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
 }
 function ProcessText() { 
-	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"http://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
+	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
 }
 function ProcessMSAutotest() { 
-	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"http://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
+	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
 }
 header('Content-type: application/json');
 if (isset($_GET['callback'])) {

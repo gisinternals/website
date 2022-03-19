@@ -125,7 +125,17 @@ function GetPackageHTML($fileName) {
 <li><a href="licensing.html" title="License Information">License Information</a></li>
 <li><a href="links.html" title="Related Links">Related Links</a></li>
 </ul>
-<!--webbot bot="Include" endspan i-checksum="6406" --><!-- #EndEditable --></div>
+<div id="support">
+<p style="color:green;font-weight:bold">Support GISInternals</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick"/>
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+</form>
+</div>
+<!--webbot bot="Include" endspan i-checksum="181" --><!-- #EndEditable --></div>
 	<div id="rightnav">
 		<!-- #BeginEditable "rightsidebar" -->
 		<!--webbot bot="Include" u-include="includes/rightbar-main.html" tag="BODY" startspan -->
@@ -169,6 +179,112 @@ function GetPackageHTML($fileName) {
 		<h1>Older Releases</h1>
 		
 		<p>The following packages are archive versions of older builds based on earlier stable releases.</p>
+		
+		<h2>GDAL 3.3.2 and MapServer 7.6.4</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1916-gdal-3-3-2-mapserver-7-6-4.zip") ?></tr>
+		<tr><td>MSVC 2015 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1916-x64-gdal-3-3-2-mapserver-7-6-4.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1928-gdal-3-3-2-mapserver-7-6-4.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1928-x64-gdal-3-3-2-mapserver-7-6-4.zip") ?></tr>
+		</table>
+		
+		<h2>GDAL 3.3.1 and MapServer 7.6.4</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1916-gdal-3-3-1-mapserver-7-6-4.zip") ?></tr>
+		<tr><td>MSVC 2015 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1916-x64-gdal-3-3-1-mapserver-7-6-4.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1928-gdal-3-3-1-mapserver-7-6-4.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1928-x64-gdal-3-3-1-mapserver-7-6-4.zip") ?></tr>
+		</table>
+		
+		<h2>GDAL 3.3.0 and MapServer 7.6.3</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1916-gdal-3-3-0-mapserver-7-6-3.zip") ?></tr>
+		<tr><td>MSVC 2015 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1916-x64-gdal-3-3-0-mapserver-7-6-3.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1928-gdal-3-3-0-mapserver-7-6-3.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1928-x64-gdal-3-3-0-mapserver-7-6-3.zip") ?></tr>
+		</table>		
+		
+		<h2>GDAL 3.2.3 and MapServer 7.6.3</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1916-gdal-3-2-3-mapserver-7-6-3.zip") ?></tr>
+		<tr><td>MSVC 2015 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1916-x64-gdal-3-2-3-mapserver-7-6-3.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1928-gdal-3-2-3-mapserver-7-6-3.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1928-x64-gdal-3-2-3-mapserver-7-6-3.zip") ?></tr>
+		</table>
+		
+		<h2>GDAL 3.2.2 and MapServer 7.6.2</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1916-gdal-3-2-2-mapserver-7-6-2.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1916-x64-gdal-3-2-2-mapserver-7-6-2.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1928-gdal-3-2-2-mapserver-7-6-2.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1928-x64-gdal-3-2-2-mapserver-7-6-2.zip") ?></tr>
+		</table>
+
+		
+		<h2>GDAL 3.2.1 and MapServer 7.6.2</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015</td><td>win32</td><?php echo GetPackageHTML("release-1900-gdal-3-2-1-mapserver-7-6-2.zip") ?></tr>
+		<tr><td>MSVC 2015</td><td>x64</td><?php echo GetPackageHTML("release-1900-x64-gdal-3-2-1-mapserver-7-6-2.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>win32</td><?php echo GetPackageHTML("release-1911-gdal-3-2-1-mapserver-7-6-2.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>x64</td><?php echo GetPackageHTML("release-1911-x64-gdal-3-2-1-mapserver-7-6-2.zip") ?></tr>
+		</table>
+
+		
+		<h2>GDAL 3.2.0 and MapServer 7.6.1</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015</td><td>win32</td><?php echo GetPackageHTML("release-1900-gdal-3-2-0-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2015</td><td>x64</td><?php echo GetPackageHTML("release-1900-x64-gdal-3-2-0-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>win32</td><?php echo GetPackageHTML("release-1911-gdal-3-2-0-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>x64</td><?php echo GetPackageHTML("release-1911-x64-gdal-3-2-0-mapserver-7-6-1.zip") ?></tr>
+		</table>
+
+		
+		<h2>GDAL 3.1.4 and MapServer 7.6.1</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015</td><td>win32</td><?php echo GetPackageHTML("release-1900-gdal-3-1-4-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2015</td><td>x64</td><?php echo GetPackageHTML("release-1900-x64-gdal-3-1-4-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>win32</td><?php echo GetPackageHTML("release-1911-gdal-3-1-4-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>x64</td><?php echo GetPackageHTML("release-1911-x64-gdal-3-1-4-mapserver-7-6-1.zip") ?></tr>
+		</table>
+
+		
+		<h2>GDAL 3.1.3 and MapServer 7.6.1</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015</td><td>win32</td><?php echo GetPackageHTML("release-1900-gdal-3-1-3-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2015</td><td>x64</td><?php echo GetPackageHTML("release-1900-x64-gdal-3-1-3-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>win32</td><?php echo GetPackageHTML("release-1911-gdal-3-1-3-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>x64</td><?php echo GetPackageHTML("release-1911-x64-gdal-3-1-3-mapserver-7-6-1.zip") ?></tr>
+		</table>
+
+		
+		<h2>GDAL 3.1.2 and MapServer 7.6.1</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015</td><td>win32</td><?php echo GetPackageHTML("release-1900-gdal-3-1-2-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2015</td><td>x64</td><?php echo GetPackageHTML("release-1900-x64-gdal-3-1-2-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>win32</td><?php echo GetPackageHTML("release-1911-gdal-3-1-2-mapserver-7-6-1.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>x64</td><?php echo GetPackageHTML("release-1911-x64-gdal-3-1-2-mapserver-7-6-1.zip") ?></tr>
+		</table>
+
+		
+		<h2>GDAL 3.0.4 and MapServer 7.4.3</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2015</td><td>win32</td><?php echo GetPackageHTML("release-1900-gdal-3-0-4-mapserver-7-4-3.zip") ?></tr>
+		<tr><td>MSVC 2015</td><td>x64</td><?php echo GetPackageHTML("release-1900-x64-gdal-3-0-4-mapserver-7-4-3.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>win32</td><?php echo GetPackageHTML("release-1911-gdal-3-0-4-mapserver-7-4-3.zip") ?></tr>
+		<tr><td>MSVC 2017</td><td>x64</td><?php echo GetPackageHTML("release-1911-x64-gdal-3-0-4-mapserver-7-4-3.zip") ?></tr>
+		</table>
+
 		
 		<h2>GDAL 3.0.2 and MapServer 7.4.2</h2>
 		<table>
@@ -417,7 +533,7 @@ function GetPackageHTML($fileName) {
 		</div>
 	<div id="footer">
 		<p>GISInternals | <a href="mailto:gisinternals@gisinternals.com" title="Mail to GISInternals">gisinternals@gisinternals.com</a></p>
-		<p>Copyright &copy; 2018 | All Rights Reserved</p>
+		<p>Copyright &copy; 2021 | All Rights Reserved</p>
 	</div>
 </div>
 <script type="text/javascript">

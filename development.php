@@ -125,7 +125,17 @@ function GetPackageHTML($fileName) {
 <li><a href="licensing.html" title="License Information">License Information</a></li>
 <li><a href="links.html" title="Related Links">Related Links</a></li>
 </ul>
-<!--webbot bot="Include" endspan i-checksum="6406" --><!-- #EndEditable --></div>
+<div id="support">
+<p style="color:green;font-weight:bold">Support GISInternals</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick"/>
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+</form>
+</div>
+<!--webbot bot="Include" endspan i-checksum="181" --><!-- #EndEditable --></div>
 	<div id="rightnav">
 		<!-- #BeginEditable "rightsidebar" -->
 		<!--webbot bot="Include" u-include="includes/rightbar-main.html" tag="BODY" startspan -->
@@ -168,23 +178,25 @@ function GetPackageHTML($fileName) {
 		<!-- #BeginEditable "maincontent" -->
 		<h1>Development versions</h1>
 		
-		<p>The following packages are compiled daily based on the MapServer Git (master) and GDAL SVN (trunk). This is based on the development branches containing all the latest features added to the projects. It is recommended to use these packages mainly for testing purposes.</p>
+		<p>The following packages are compiled daily based on the MapServer Git (main) and GDAL Git (master). This is based on the development branches containing all the latest features added to the projects. It is recommended to use these packages mainly for testing purposes.</p>
 		<table>
 		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Date</th><th>Revisions</th></tr>
-		<tr><td>MSVC 2015</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1900-gdal-mapserver.zip">release-1900-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1900-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1900-gdal-mapserver.zip") ?></tr>
-		<tr><td>MSVC 2015</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1900-x64-gdal-mapserver.zip">release-1900-x64-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1900-x64-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1900-x64-gdal-mapserver.zip") ?></tr>
-		<tr><td>MSVC 2017</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1911-gdal-mapserver.zip">release-1911-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1911-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1911-gdal-mapserver.zip") ?></tr>
-		<tr><td>MSVC 2017</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1911-x64-gdal-mapserver.zip">release-1911-x64-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1911-x64-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1911-x64-gdal-mapserver.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1916-gdal-mapserver.zip">release-1916-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1916-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1916-gdal-mapserver.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1916-x64-gdal-mapserver.zip">release-1916-x64-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1916-x64-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1916-x64-gdal-mapserver.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1928-gdal-mapserver.zip">release-1928-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1928-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1928-gdal-mapserver.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1928-x64-gdal-mapserver.zip">release-1928-x64-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1928-x64-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1928-x64-gdal-mapserver.zip") ?></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1930-gdal-mapserver.zip">release-1930-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1930-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1930-gdal-mapserver.zip") ?></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1930-x64-gdal-mapserver.zip">release-1930-x64-gdal-mapserver</a></td><td><a href="packageinfo.php?file=release-1930-x64-gdal-mapserver.zip">information</a></td><?php echo GetPackageHTML("release-1930-x64-gdal-mapserver.zip") ?></tr>
 		</table>
 		<p><span class="note">Note:</span> The different compilers or architectures involve different CRT dependencies, therefore the binaries of the different packages are not interchangeable.</p>
-
+<p>The <span class="note">new</span> packages are based on a completely new SDK build with upgraded dependency versions.</p>
 <p>The contents of the packages are provided under the terms of <a href="licensing.html">this license</a>. It is intended to give you permission to do whatever you want with the files: download, modify, redistribute as you please, including building proprietary commercial software, no permission from <a href="myprofile.html">Tamas Szekeres</a> is required. Some external libraries which can be optionally used by GDAL and MapServer (provided as plugins) are under radically different licenses, you <strong>MUST obtain valid licenses</strong> for each of these dependent libraries.</p>
 
 		<!-- #EndEditable -->
 		</div>
 	<div id="footer">
 		<p>GISInternals | <a href="mailto:gisinternals@gisinternals.com" title="Mail to GISInternals">gisinternals@gisinternals.com</a></p>
-		<p>Copyright &copy; 2018 | All Rights Reserved</p>
+		<p>Copyright &copy; 2021 | All Rights Reserved</p>
 	</div>
 </div>
 <script type="text/javascript">
