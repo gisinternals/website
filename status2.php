@@ -68,6 +68,10 @@ function GetPackageHTML($fileName) {
 }
 ?>
 <!-- #EndEditable -->
+<!-- #BeginEditable "adsense" -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3817663472921822"
+     crossorigin="anonymous"></script>
+<!-- #EndEditable -->
 </head>
 
 <body id="mainbody">
@@ -225,7 +229,7 @@ function GetPackageHTML($fileName) {
 		</div>
 	<div id="footer">
 		<p>GISInternals | <a href="mailto:gisinternals@gisinternals.com" title="Mail to GISInternals">gisinternals@gisinternals.com</a></p>
-		<p>Copyright &copy; 2021 | All Rights Reserved</p>
+		<p>Copyright &copy; 2022 | All Rights Reserved</p>
 	</div>
 </div>
 <script type="text/javascript">

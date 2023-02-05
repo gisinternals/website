@@ -4,9 +4,7 @@ var ddmenuitem      = 0;
 
 var serverlist = [
 {name: 'download.gisinternals.com', url: 'https://download.gisinternals.com/getcontent.php?callback=?'},
-{name: 'download2.gisinternals.com', url: 'http://download.gisinternals.com/getcontent.php?callback=?'},
-{name: 'download3.gisinternals.com', url: 'http://download2.gisinternals.com/sdk/GetContent.ashx?callback=?'},
-{name: 'download4.gisinternals.com', url: 'http://download3.gisinternals.com/sdk/GetContent.ashx?callback=?'},
+{name: 'build2.gisinternals.com', url: 'https://build2.gisinternals.com/getcontent.php?callback=?'},
 ];
 
 var currenthost = 0;

@@ -18,6 +18,8 @@ function GetDescription($fileName) {
 		return "Installer for the GDAL ECW 5.1 plugin (must be installed to the same directory as the GDAL core, the 3.3 and 5.x versions cannot be installed side by side)";
     if (preg_match("/gdal-.*-ecw-53\.msi/i", $fileName))
 		return "Installer for the GDAL ECW 5.3 plugin (must be installed to the same directory as the GDAL core, the 3.3 and 5.x versions cannot be installed side by side)";
+    if (preg_match("/gdal-.*-ecw-55\.msi/i", $fileName))
+		return "Installer for the GDAL ECW 5.5 plugin (must be installed to the same directory as the GDAL core, the 3.3 and 5.x versions cannot be installed side by side)";
 	if (preg_match("/gdal-.*-oracle\.msi/i", $fileName))
 		return "Installer for the GDAL Oracle plugin (must be installed to the same directory as the GDAL core)";
 	if (preg_match("/gdal-.*-filegdb\.msi/i", $fileName))
@@ -26,6 +28,8 @@ function GetDescription($fileName) {
 		return "Installer for the GDAL MrSID plugin (must be installed to the same directory as the GDAL core)";
 	if (preg_match("/GDAL-.*py.*\.(exe|msi)/i", $fileName))
 		return "Installer for the GDAL python bindings (requires to install the GDAL core)";
+	if (preg_match("/GDAL-.*Python.*\.zip/i", $fileName))
+		return "GDAL python bindings in a .zip package (requires to install the GDAL core)";
 	if (preg_match("/MapScript-.*py.*\.(exe|msi)/i", $fileName))
 		return "Installer for the MapScript python bindings (Not yet working)";
 	return "";
@@ -41,15 +45,15 @@ function ProcessFilelist() {
 		echo "<tr><th>File name</th><th>File date</th><th>Size</th><th>Description</th>";
 		if (file_exists($sdkRoot."downloads/".$fileName)) {
 		    $fullPath = $sdkRoot."downloads/".$fileName;
-			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$fileName."\">".$fileName."</a></td><td>".date("Y-m-d H:i:s", filectime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>Compiled binaries in a single .zip package</td></tr>";
+			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$fileName."\">".$fileName."</a></td><td>".date("Y-m-d H:i:s", filemtime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>Compiled binaries in a single .zip package</td></tr>";
 		}
 		if (file_exists($sdkRoot."downloads/".$dirName."-src.zip")) {
 		    $fullPath = $sdkRoot."downloads/".$dirName."-src.zip";
-			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$dirName."-src.zip\">".$dirName."-src.zip</a></td><td>".date("Y-m-d H:i:s", filectime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>GDAL and MapServer sources</td></tr>";
+			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$dirName."-src.zip\">".$dirName."-src.zip</a></td><td>".date("Y-m-d H:i:s", filemtime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>GDAL and MapServer sources</td></tr>";
 		}
 		if (file_exists($sdkRoot."downloads/".$dirName."-libs.zip")) {
 		    $fullPath = $sdkRoot."downloads/".$dirName."-libs.zip";
-			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$dirName."-libs.zip\">".$dirName."-libs.zip</a></td><td>".date("Y-m-d H:i:s", filectime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>Compiled libraries and headers</td></tr>";
+			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$dirName."-libs.zip\">".$dirName."-libs.zip</a></td><td>".date("Y-m-d H:i:s", filemtime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>Compiled libraries and headers</td></tr>";
 		}
 		$pkgDir = $sdkRoot."downloads/".$dirName;
 		if (file_exists($pkgDir)) {
@@ -57,7 +61,7 @@ function ProcessFilelist() {
 			foreach ($dir as $fileinfo) {
 	    		if (!$fileinfo->isDot()) {
 	    		    $fullPath = $sdkRoot."downloads/".$dirName."/".$fileinfo->getFilename();
-	    			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$dirName."/".$fileinfo->getFilename()."\">".$fileinfo->getFilename()."</a></td><td>".date("Y-m-d H:i:s", filectime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>".GetDescription($fileinfo->getFilename())."</td></tr>";
+	    			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$dirName."/".$fileinfo->getFilename()."\">".$fileinfo->getFilename()."</a></td><td>".date("Y-m-d H:i:s", filemtime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>".GetDescription($fileinfo->getFilename())."</td></tr>";
 	    		}
 			}
 			echo "</table><p><span class=\"note\">Note:</span> In order to have the bindings work the location of the core components must be included manually in the PATH environment variable.</p>";

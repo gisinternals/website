@@ -68,6 +68,10 @@ function GetPackageHTML($fileName) {
 }
 ?>
 <!-- #EndEditable -->
+<!-- #BeginEditable "adsense" -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3817663472921822"
+     crossorigin="anonymous"></script>
+<!-- #EndEditable -->
 </head>
 
 <body id="mainbody">
@@ -179,15 +183,15 @@ function GetPackageHTML($fileName) {
 		<h1>Stable Branches</h1>
 		<p>The following packages are compiled daily based on the MapServer Git and GDAL SVN latest stable branches. This is based on the stable branches containing all recent fixes added to the stable branch but not included in the latest release. It is recommended to use these packages mainly for testing purposes.</p>
 		
-		<h2>GDAL 3.4 and MapServer 7.6</h2>
+		<h2>GDAL 3.6 and MapServer 8.0</h2>
 		<table>
 		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Date</th><th>Revisions</th></tr>
-		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1916-gdal-3-4-mapserver-7-6.zip">release-1916-gdal-3-4-mapserver-7-6</a></td><td><a href="packageinfo.php?file=release-1916-gdal-3-4-mapserver-7-6.zip">information</a></td><?php echo GetPackageHTML("release-1916-gdal-3-4-mapserver-7-6.zip") ?></tr>
-		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1916-x64-gdal-3-4-mapserver-7-6.zip">release-1916-x64-gdal-3-4-mapserver-7-6</a></td><td><a href="packageinfo.php?file=release-1916-x64-gdal-3-4-mapserver-7-6.zip">information</a></td><?php echo GetPackageHTML("release-1916-x64-gdal-3-4-mapserver-7-6.zip") ?></tr>
-		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1928-gdal-3-4-mapserver-7-6.zip">release-1928-gdal-3-4-mapserver-7-6</a></td><td><a href="packageinfo.php?file=release-1928-gdal-3-4-mapserver-7-6.zip">information</a></td><?php echo GetPackageHTML("release-1928-gdal-3-4-mapserver-7-6.zip") ?></tr>
-		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1928-x64-gdal-3-4-mapserver-7-6.zip">release-1928-x64-gdal-3-4-mapserver-7-6</a></td><td><a href="packageinfo.php?file=release-1928-x64-gdal-3-4-mapserver-7-6.zip">information</a></td><?php echo GetPackageHTML("release-1928-x64-gdal-3-4-mapserver-7-6.zip") ?></tr>
-		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1930-gdal-3-4-mapserver-7-6.zip">release-1930-gdal-3-4-mapserver-7-6</a></td><td><a href="packageinfo.php?file=release-1930-gdal-3-4-mapserver-7-6.zip">information</a></td><?php echo GetPackageHTML("release-1930-gdal-3-4-mapserver-7-6.zip") ?></tr>
-		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1930-x64-gdal-3-4-mapserver-7-6.zip">release-1930-x64-gdal-3-4-mapserver-7-6</a></td><td><a href="packageinfo.php?file=release-1930-x64-gdal-3-4-mapserver-7-6.zip">information</a></td><?php echo GetPackageHTML("release-1930-x64-gdal-3-4-mapserver-7-6.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1916-gdal-3-6-mapserver-8-0.zip">release-1916-gdal-3-6-mapserver-8-0</a></td><td><a href="packageinfo.php?file=release-1916-gdal-3-6-mapserver-8-0.zip">information</a></td><?php echo GetPackageHTML("release-1916-gdal-3-6-mapserver-8-0.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1916-x64-gdal-3-6-mapserver-8-0.zip">release-1916-x64-gdal-3-6-mapserver-8-0</a></td><td><a href="packageinfo.php?file=release-1916-x64-gdal-3-6-mapserver-8-0.zip">information</a></td><?php echo GetPackageHTML("release-1916-x64-gdal-3-6-mapserver-8-0.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1928-gdal-3-6-mapserver-8-0.zip">release-1928-gdal-3-6-mapserver-8-0</a></td><td><a href="packageinfo.php?file=release-1928-gdal-3-6-mapserver-8-0.zip">information</a></td><?php echo GetPackageHTML("release-1928-gdal-3-6-mapserver-8-0.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1928-x64-gdal-3-6-mapserver-8-0.zip">release-1928-x64-gdal-3-6-mapserver-8-0</a></td><td><a href="packageinfo.php?file=release-1928-x64-gdal-3-6-mapserver-8-0.zip">information</a></td><?php echo GetPackageHTML("release-1928-x64-gdal-3-6-mapserver-8-0.zip") ?></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1930-gdal-3-6-mapserver-8-0.zip">release-1930-gdal-3-6-mapserver-8-0</a></td><td><a href="packageinfo.php?file=release-1930-gdal-3-6-mapserver-8-0.zip">information</a></td><?php echo GetPackageHTML("release-1930-gdal-3-6-mapserver-8-0.zip") ?></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1930-x64-gdal-3-6-mapserver-8-0.zip">release-1930-x64-gdal-3-6-mapserver-8-0</a></td><td><a href="packageinfo.php?file=release-1930-x64-gdal-3-6-mapserver-8-0.zip">information</a></td><?php echo GetPackageHTML("release-1930-x64-gdal-3-6-mapserver-8-0.zip") ?></tr>
 		</table>
 
 		<p><span class="note">Note:</span> The different compilers or architectures involve different CRT dependencies, therefore the binaries of the different packages are not interchangeable.</p>
@@ -197,7 +201,7 @@ function GetPackageHTML($fileName) {
 		</div>
 	<div id="footer">
 		<p>GISInternals | <a href="mailto:gisinternals@gisinternals.com" title="Mail to GISInternals">gisinternals@gisinternals.com</a></p>
-		<p>Copyright &copy; 2021 | All Rights Reserved</p>
+		<p>Copyright &copy; 2022 | All Rights Reserved</p>
 	</div>
 </div>
 <script type="text/javascript">

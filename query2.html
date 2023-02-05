@@ -137,26 +137,12 @@
 <!--webbot bot="Include" endspan i-checksum="35518" --><!-- #EndEditable --></div>
 	<div id="content">
 		<!-- #BeginEditable "maincontent" -->
-		<h1>About GISInternals</h1>
-		<p>GISInternals is an online system for creating daily built binary packages for the <a href="http://www.gdal.org">GDAL</a> and <a href="http://www.mapserver.org">MapServer</a> projects. The anchestor of this system has been provided to be the Windows buildslaves for the osgeo buildbot in 2007. The build system in the current form (providing downloadable packages) has been set up <a href="http://osgeo-org.1560.n6.nabble.com/MapServer-and-GDAL-daily-build-Windows-binaries-available-td3755112.html">in 2009</a>. As of this time, the system has been continuously improved by adding more and more packages to make the life easier for the users and developers of these open source projects. 
-		During this time the number of the visitors and the amount of the downloads continues to grow, and the site has been visited from more than 
-		<strong>160</strong> countries around the world.</p>
-		<div class="center"><img alt="Visitors from Countries" width="70%" src="content-images/map.jpg"/></div>
-		<p>In 2014 december the achitecture of this site has been redesigned. The functionality has been divided into 3 portions: the GUI frontend, the file servers 
-		(php and asp.net backends) and the the build server. This approach will provide to increase the reliability and the availability of the site by the chance of using multiple build servers (upload agents) in the future.</p>
-		<p>The primary objectives of this build system are:</p>
-		<ul>
-		<li>Provide complete solutions (containing all the dependencies for running and compiling the applications).</li>
-		<li>Provide homogenous build. All the dependencies are compiled against the same CRT libraries, to eliminate the potential run-time problems.</li>
-		<li>Downloadable packages are kept as small as possible (only the required files are included).</li>
-		<li>Packages are prepared to have the things set up and running easily.</li>
-		<li>Packages are location independent. You can run and develop multiple versions of the projects in the same computer in different directories.</li>
-		</ul>
-		<p>In addition to the binary packages and installers, we provide all the required files (libs and headers) to compile the projects on Windows by using the supported <a href="http://www.microsoft.com/visualstudio/en-us">Microsoft Visual Studio</a> versions.</p>
-		<p>Automated compilation of the packages is scheduled daily at <em>4:00AM (Central European Time)</em>, the total size of all the packages created daily is at about 
-		<strong>1 gigabytes</strong>.</p>
-		<p>This build environment compiles <a href="http://www.gdal.org/">GDAL</a> and <a href="http://mapserver.org/">MapServer</a> from the source repositories (git and svn) and provide cutting edge binary packages containing the latest fixes until the time when build has started (refer to <a href="query.html?content=status">build status</a> for the details). 
-Only the binaries of the latest successful builds are packaged and made available to download. The possible breaking changes in the repositories cause the compilation to terminate immediately before the packaging is started.</p>
+		<div id="servercontent"></div>
+		<div id="currentmirror"></div>
+    <script type="text/javascript">
+    var url = parseUrl(location.href);
+    loadContent2(url.params,1);
+    </script>
 		<!-- #EndEditable -->
 		</div>
 	<div id="footer">

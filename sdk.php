@@ -34,6 +34,10 @@ function GetFileDate($fileName) {
 }
 ?>
 <!-- #EndEditable -->
+<!-- #BeginEditable "adsense" -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3817663472921822"
+     crossorigin="anonymous"></script>
+<!-- #EndEditable -->
 </head>
 
 <body id="mainbody">
@@ -162,6 +166,8 @@ function GetFileDate($fileName) {
 		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1916-x64-dev.zip">release-1916-x64-dev</a></td><td><?php echo GetFileDate("release-1916-x64-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1928-dev.zip">release-1928-dev</a></td><td><?php echo GetFileDate("release-1928-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1928-x64-dev.zip">release-1928-x64-dev</a></td><td><?php echo GetFileDate("release-1928-x64-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1930-dev.zip">release-1930-dev</a></td><td><?php echo GetFileDate("release-1930-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1930-x64-dev.zip">release-1930-x64-dev</a></td><td><?php echo GetFileDate("release-1930-x64-dev.zip") ?></td></tr>
 		</table>
 		<p><span class="note">Note:</span> The different compilers or platforms involve different CRT dependencies, therefore the binaries of the different packages are not interchangeable.</p>
 <p>The <span class="note">new</span> packages are based on a completely new SDK build with upgraded dependency versions.</p>
@@ -170,7 +176,7 @@ function GetFileDate($fileName) {
 		</div>
 	<div id="footer">
 		<p>GISInternals | <a href="mailto:gisinternals@gisinternals.com" title="Mail to GISInternals">gisinternals@gisinternals.com</a></p>
-		<p>Copyright &copy; 2021 | All Rights Reserved</p>
+		<p>Copyright &copy; 2022 | All Rights Reserved</p>
 	</div>
 </div>
 <script type="text/javascript">
