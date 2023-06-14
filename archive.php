@@ -184,6 +184,30 @@ function GetPackageHTML($fileName) {
 		
 		<p>The following packages are archive versions of older builds based on earlier stable releases.</p>
 		
+		<h2>GDAL 3.6.3 and MapServer 8.0.0</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1916-gdal-3-6-3-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1916-x64-gdal-3-6-3-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1928-gdal-3-6-3-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1928-x64-gdal-3-6-3-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1930-gdal-3-6-3-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1930-x64-gdal-3-6-3-mapserver-8-0-0.zip") ?></tr>
+		</table>
+
+		
+		<h2>GDAL 3.6.2 and MapServer 8.0.0</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1916-gdal-3-6-2-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1916-x64-gdal-3-6-2-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1928-gdal-3-6-2-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1928-x64-gdal-3-6-2-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>win32</td><?php echo GetPackageHTML("release-1930-gdal-3-6-2-mapserver-8-0-0.zip") ?></tr>
+		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>x64</td><?php echo GetPackageHTML("release-1930-x64-gdal-3-6-2-mapserver-8-0-0.zip") ?></tr>
+		</table>
+
+		
 		<h2>GDAL 3.5.3 and MapServer 8.0.0</h2>
 		<table>
 		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
@@ -632,7 +656,7 @@ function GetPackageHTML($fileName) {
 		</div>
 	<div id="footer">
 		<p>GISInternals | <a href="mailto:gisinternals@gisinternals.com" title="Mail to GISInternals">gisinternals@gisinternals.com</a></p>
-		<p>Copyright &copy; 2022 | All Rights Reserved</p>
+		<p>Copyright &copy; 2023 | All Rights Reserved</p>
 	</div>
 </div>
 <script type="text/javascript">
