@@ -163,15 +163,18 @@ function GetFileDate($fileName) {
 		<tr><td>MSVC 2015</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1900-x64-dev.zip">release-1900-x64-dev</a></td><td><?php echo GetFileDate("release-1900-x64-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2017</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1911-dev.zip">release-1911-dev</a></td><td><?php echo GetFileDate("release-1911-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2017</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1911-x64-dev.zip">release-1911-x64-dev</a></td><td><?php echo GetFileDate("release-1911-x64-dev.zip") ?></td></tr>
-		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1916-dev.zip">release-1916-dev</a></td><td><?php echo GetFileDate("release-1916-dev.zip") ?></td></tr>
-		<tr><td>MSVC 2017 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1916-x64-dev.zip">release-1916-x64-dev</a></td><td><?php echo GetFileDate("release-1916-x64-dev.zip") ?></td></tr>
-		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1928-dev.zip">release-1928-dev</a></td><td><?php echo GetFileDate("release-1928-dev.zip") ?></td></tr>
-		<tr><td>MSVC 2019 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1928-x64-dev.zip">release-1928-x64-dev</a></td><td><?php echo GetFileDate("release-1928-x64-dev.zip") ?></td></tr>
-		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>win32</td><td><a href="query.html?content=filelist&file=release-1930-dev.zip">release-1930-dev</a></td><td><?php echo GetFileDate("release-1930-dev.zip") ?></td></tr>
-		<tr><td>MSVC 2022 <sup class="note">new</sup></td><td>x64</td><td><a href="query.html?content=filelist&file=release-1930-x64-dev.zip">release-1930-x64-dev</a></td><td><?php echo GetFileDate("release-1930-x64-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2017</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1916-dev.zip">release-1916-dev</a></td><td><?php echo GetFileDate("release-1916-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2017</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1916-x64-dev.zip">release-1916-x64-dev</a></td><td><?php echo GetFileDate("release-1916-x64-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2019</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1928-dev.zip">release-1928-dev</a></td><td><?php echo GetFileDate("release-1928-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2019</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1928-x64-dev.zip">release-1928-x64-dev</a></td><td><?php echo GetFileDate("release-1928-x64-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2019</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1929-dev.zip">release-1929-dev</a></td><td><?php echo GetFileDate("release-1929-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2019</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1929-x64-dev.zip">release-1929-x64-dev</a></td><td><?php echo GetFileDate("release-1929-x64-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2022</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1930-dev.zip">release-1930-dev</a></td><td><?php echo GetFileDate("release-1930-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2022</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1930-x64-dev.zip">release-1930-x64-dev</a></td><td><?php echo GetFileDate("release-1930-x64-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2022</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1944-dev.zip">release-1944-dev</a></td><td><?php echo GetFileDate("release-1944-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2022</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1944-x64-dev.zip">release-1944-x64-dev</a></td><td><?php echo GetFileDate("release-1944-x64-dev.zip") ?></td></tr>
 		</table>
 		<p><span class="note">Note:</span> The different compilers or platforms involve different CRT dependencies, therefore the binaries of the different packages are not interchangeable.</p>
-<p>The <span class="note">new</span> packages are based on a completely new SDK build with upgraded dependency versions.</p>
 <p>The contents of the packages are provided under the terms of <a href="licensing.html">this license</a>. It is intended to give you permission to do whatever you want with the files: download, modify, redistribute as you please, including building proprietary commercial software, no permission from <a href="myprofile.html">Tamas Szekeres</a> is required. Some external libraries which can be optionally used by GDAL and MapServer (provided as plugins) are under radically different licenses, you <strong>MUST obtain valid licenses</strong> for each of these dependent libraries.</p>
 		<!-- #EndEditable -->
 		</div>
