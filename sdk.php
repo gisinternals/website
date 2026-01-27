@@ -167,11 +167,11 @@ function GetFileDate($fileName) {
 		<tr><td>MSVC 2017</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1916-x64-dev.zip">release-1916-x64-dev</a></td><td><?php echo GetFileDate("release-1916-x64-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2019</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1928-dev.zip">release-1928-dev</a></td><td><?php echo GetFileDate("release-1928-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2019</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1928-x64-dev.zip">release-1928-x64-dev</a></td><td><?php echo GetFileDate("release-1928-x64-dev.zip") ?></td></tr>
-		<tr><td>MSVC 2019</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1929-dev.zip">release-1929-dev</a></td><td><?php echo GetFileDate("release-1929-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2019</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1929-dev.zip">release-1929-dev</a></td><td><?php echo GetFileDate("release-1929-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2019</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1929-x64-dev.zip">release-1929-x64-dev</a></td><td><?php echo GetFileDate("release-1929-x64-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2022</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1930-dev.zip">release-1930-dev</a></td><td><?php echo GetFileDate("release-1930-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2022</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1930-x64-dev.zip">release-1930-x64-dev</a></td><td><?php echo GetFileDate("release-1930-x64-dev.zip") ?></td></tr>
-		<tr><td>MSVC 2022</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1944-dev.zip">release-1944-dev</a></td><td><?php echo GetFileDate("release-1944-dev.zip") ?></td></tr>
+		<tr><td>MSVC 2022</td><td>win32</td><td><a href="query.html?content=filelist&file=release-1944-dev.zip">release-1944-dev</a></td><td><?php echo GetFileDate("release-1944-dev.zip") ?></td></tr>
 		<tr><td>MSVC 2022</td><td>x64</td><td><a href="query.html?content=filelist&file=release-1944-x64-dev.zip">release-1944-x64-dev</a></td><td><?php echo GetFileDate("release-1944-x64-dev.zip") ?></td></tr>
 		</table>
 		<p><span class="note">Note:</span> The different compilers or platforms involve different CRT dependencies, therefore the binaries of the different packages are not interchangeable.</p>
