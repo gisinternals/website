@@ -185,6 +185,15 @@ function GetPackageHTML($fileName) {
 		
 		<p>The following packages are archive versions of older builds based on earlier stable releases.</p>
 		
+		<h2>GDAL 3.11.5 and MapServer 8.4.1</h2>
+		<table>
+		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
+		<tr><td>MSVC 2019</td><td>win32</td><?php echo GetPackageHTML("release-1929-gdal-3-11-5-mapserver-8-4-1.zip") ?></tr>
+		<tr><td>MSVC 2019</td><td>x64</td><?php echo GetPackageHTML("release-1929-x64-gdal-3-11-5-mapserver-8-4-1.zip") ?></tr>
+		<tr><td>MSVC 2022</td><td>win32</td><?php echo GetPackageHTML("release-1944-gdal-3-11-5-mapserver-8-4-1.zip") ?></tr>
+		<tr><td>MSVC 2022</td><td>x64</td><?php echo GetPackageHTML("release-1944-x64-gdal-3-11-5-mapserver-8-4-1.zip") ?></tr>
+		</table>
+		
 		<h2>GDAL 3.11.3 and MapServer 8.4.0</h2>
 		<table>
 		<tr><th>Compiler</th><th>Arch.</th><th>Downloads</th><th>Package Info</th><th>Revisions</th></tr>
