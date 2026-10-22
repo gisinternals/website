@@ -25,10 +25,26 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="scripts/gisinternals.js"></script>
 <?php
-$fileName = $_GET['file'];
-$sdkRoot = "./sdk/";
-$fullPath = $sdkRoot."downloads/".$fileName;
-$documentRoot = $sdkRoot."downloads/doc/".basename($fileName, ".zip")."/";
+require_once __DIR__ . '/includes/security.php';
+
+$fileName = requestString($_GET, 'file') ?? '';
+if ($fileName !== '' && !isSafeLeafName($fileName)) {
+    http_response_code(400);
+    die('Invalid file parameter.');
+}
+
+$documentRoot = __DIR__ . '/sdk/downloads/doc/' . basename($fileName, '.zip');
+
+function ReadPackageDocument(string $documentRoot, string $name): string
+{
+    $path = resolveFileBelow($documentRoot, $name);
+    if ($path === null) {
+        return '';
+    }
+
+    $contents = file_get_contents($path);
+    return $contents === false ? '' : nl2br(escapeHtml($contents));
+}
 ?>
 <!-- #EndEditable -->
 <!-- #BeginEditable "adsense" -->
@@ -144,7 +160,7 @@ $documentRoot = $sdkRoot."downloads/doc/".basename($fileName, ".zip")."/";
 <!--webbot bot="Include" endspan i-checksum="35518" --><!-- #EndEditable --></div>
 	<div id="content">
 		<!-- #BeginEditable "maincontent" -->
-    <div id="topictitleDiv" class="topictitle">General Information about the <span class="filename"><?php echo $fileName ?></span> package</div>
+    <div id="topictitleDiv" class="topictitle">General Information about the <span class="filename"><?php echo escapeHtml($fileName) ?></span> package</div>
     <p>This package contains all the required files to successfully run <a href="http://mapserver.org/">MapServer</a> and <a href="http://www.gdal.org/">GDAL</a> related applications on Windows.
     The files are organized according to the following directory layout:</p>
     <div class="sample">
@@ -191,22 +207,22 @@ $documentRoot = $sdkRoot."downloads/doc/".basename($fileName, ".zip")."/";
     <p><span class="note">Note:</span> When using the Oracle and SDE plugins (Win32 packages only) be sure that the client libraries have been installed in the environment previously.</p>
     <h2>MapServer Version Information</h2>
     <p>The compiled MapServer reports the following version information. (mapserv -v)</p>
-    <div id="msversionDiv" class="sample"><?php echo nl2br(file_get_contents( $documentRoot."ms_version.txt" )); ?></div>
+    <div id="msversionDiv" class="sample"><?php echo ReadPackageDocument($documentRoot, "ms_version.txt"); ?></div>
     <h2>Libraries used for the MapServer Compilation</h2>
     <p>MapServer have been compiled using the following dependent libraries</p>
-    <div id="msdepsDiv" class="sample"><?php echo nl2br(file_get_contents( $documentRoot."ms_deps.txt" )); ?></div>
+    <div id="msdepsDiv" class="sample"><?php echo ReadPackageDocument($documentRoot, "ms_deps.txt"); ?></div>
     <h2>GDAL Version Information</h2>
     <p>The compiled GDAL reports the following version information. (gdalinfo --version)</p>
-    <div id="gdalversionDiv" class="sample"><?php echo nl2br(file_get_contents( $documentRoot."gdal_version.txt" )); ?></div>
+    <div id="gdalversionDiv" class="sample"><?php echo ReadPackageDocument($documentRoot, "gdal_version.txt"); ?></div>
     <h2>Supported GDAL Formats</h2>
     <p>The compiled GDAL package reports the following supported formats. (gdalinfo --formats). For more information about the GDAL formats visit: <a href="http://www.gdal.org/formats_list.html">GDAL Raster Formats</a></p>
-    <div id="gdalformatsDiv" class="sample"><?php echo nl2br(file_get_contents( $documentRoot."gdal_formats.txt" )); ?></div>
+    <div id="gdalformatsDiv" class="sample"><?php echo ReadPackageDocument($documentRoot, "gdal_formats.txt"); ?></div>
     <h2>Supported OGR Formats</h2>
     <p>The compiled OGR package reports the following supported formats. (ogrinfo --formats) For more information about the OGR formats visit: <a href="http://www.gdal.org/ogr/ogr_formats.html">OGR Vector Formats</a></p>
-    <div id="ogrformatsDiv" class="sample"><?php echo nl2br(file_get_contents( $documentRoot."ogr_formats.txt" )); ?></div>
+    <div id="ogrformatsDiv" class="sample"><?php echo ReadPackageDocument($documentRoot, "ogr_formats.txt"); ?></div>
     <h2>Libraries used for the GDAL Compilation</h2>
     <p>GDAL have been compiled using the following dependent libraries</p>
-    <div id="gdaldepsDiv" class="sample"><?php echo nl2br(file_get_contents( $documentRoot."gdal_deps.txt" )); ?></div>
+    <div id="gdaldepsDiv" class="sample"><?php echo ReadPackageDocument($documentRoot, "gdal_deps.txt"); ?></div>
 		<!-- #EndEditable -->
 		</div>
 	<div id="footer">
