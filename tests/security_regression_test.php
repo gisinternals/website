@@ -170,6 +170,7 @@ if (extension_loaded('curl')) {
 }
 
 check(safePublicHost(array('HTTP_HOST' => 'download.gisinternals.com')) === 'download.gisinternals.com', 'known public host should be retained');
+check(safePublicHost(array('HTTP_HOST' => 'attacker.gisinternals.com')) === 'www.gisinternals.com', 'unlisted GISInternals subdomain should use the safe default');
 check(safePublicHost(array('HTTP_HOST' => 'evil.example\"><script>alert(1)</script>')) === 'www.gisinternals.com', 'untrusted Host header should use the safe default');
 
 $temporaryRoot = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'gisinternals-security-' . bin2hex(random_bytes(6));

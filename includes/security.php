@@ -258,8 +258,12 @@ function fetchAllowedRemote(string $url, ?callable $resolver = null, ?callable $
 
 function safePublicHost(array $server): string
 {
-    $host = requestString($server, 'HTTP_HOST') ?? '';
-    if (preg_match('/^(?:[A-Za-z0-9-]+\.)*gisinternals\.com(?::(?:80|443))?$/D', $host) === 1) {
+    $host = strtolower(requestString($server, 'HTTP_HOST') ?? '');
+    if (in_array($host, array(
+        'www.gisinternals.com',
+        'download.gisinternals.com',
+        'build2.gisinternals.com',
+    ), true)) {
         return $host;
     }
 
