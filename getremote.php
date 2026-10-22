@@ -1,8 +1,15 @@
 <?php
-if (isset($_GET['src']) or die("src parameter missing.")) {
-    $result = file_get_contents($_GET['src']);
-    if ($result == false)
-    	$result = "<span style=\"background-color:Gray;color:Black;font-weight:bold\">not available</span>";
-    echo $result;
+require_once __DIR__ . '/includes/security.php';
+
+$source = requestString($_GET, 'src');
+if ($source === null) {
+    die('src parameter missing.');
 }
+
+$result = fetchAllowedRemote($source);
+if ($result === false) {
+    $result = '<span style="background-color:Gray;color:Black;font-weight:bold">not available</span>';
+}
+
+echo $result;
 ?>

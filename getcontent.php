@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/security.php';
+
 function GetFileSize($fullPath) {
 	return round(filesize($fullPath)/1024);
 }
@@ -36,39 +38,54 @@ function GetDescription($fileName) {
 }
 
 function ProcessFilelist() {
-    $sdkRoot = "./sdk/"; 
-	if (isset($_GET['file']) or die ("Missing file parameter")) {
-	    $fileName = $_GET['file'];
-		$dirName = substr($fileName, 0, strrpos($fileName, "."));
-		$baseUrl = "https://".$_SERVER['HTTP_HOST']."/";
-		echo "<p>Available downloads (<b>".$dirName."</b>):</p><table>";
+    $downloadRoot = __DIR__ . "/sdk/downloads";
+    $fileName = requestString($_GET, 'file');
+    if ($fileName === null) {
+        die("Missing file parameter");
+    }
+    if (!isSafeLeafName($fileName)) {
+        die("Content not available at server.");
+    }
+
+    $extensionPosition = strrpos($fileName, ".");
+    $dirName = $extensionPosition === false ? $fileName : substr($fileName, 0, $extensionPosition);
+    if (!isSafeLeafName($dirName)) {
+        die("Content not available at server.");
+    }
+
+		$baseUrl = "https://" . safePublicHost($_SERVER) . "/";
+		echo "<p>Available downloads (<b>" . escapeHtml($dirName) . "</b>):</p><table>";
 		echo "<tr><th>File name</th><th>File date</th><th>Size</th><th>Description</th>";
-		if (file_exists($sdkRoot."downloads/".$fileName)) {
-		    $fullPath = $sdkRoot."downloads/".$fileName;
-			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$fileName."\">".$fileName."</a></td><td>".date("Y-m-d H:i:s", filemtime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>Compiled binaries in a single .zip package</td></tr>";
+		$fullPath = resolveFileBelow($downloadRoot, $fileName);
+		if ($fullPath !== null) {
+			echo "<tr><td><a href=\"" . $baseUrl . "sdk/downloads/" . rawurlencode($fileName) . "\">" . escapeHtml($fileName) . "</a></td><td>" . date("Y-m-d H:i:s", filemtime($fullPath)) . "</td><td>" . GetFileSize($fullPath) . " kB</td><td>Compiled binaries in a single .zip package</td></tr>";
 		}
-		if (file_exists($sdkRoot."downloads/".$dirName."-src.zip")) {
-		    $fullPath = $sdkRoot."downloads/".$dirName."-src.zip";
-			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$dirName."-src.zip\">".$dirName."-src.zip</a></td><td>".date("Y-m-d H:i:s", filemtime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>GDAL and MapServer sources</td></tr>";
+		$sourceName = $dirName . "-src.zip";
+		$fullPath = resolveFileBelow($downloadRoot, $sourceName);
+		if ($fullPath !== null) {
+			echo "<tr><td><a href=\"" . $baseUrl . "sdk/downloads/" . rawurlencode($sourceName) . "\">" . escapeHtml($sourceName) . "</a></td><td>" . date("Y-m-d H:i:s", filemtime($fullPath)) . "</td><td>" . GetFileSize($fullPath) . " kB</td><td>GDAL and MapServer sources</td></tr>";
 		}
-		if (file_exists($sdkRoot."downloads/".$dirName."-libs.zip")) {
-		    $fullPath = $sdkRoot."downloads/".$dirName."-libs.zip";
-			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$dirName."-libs.zip\">".$dirName."-libs.zip</a></td><td>".date("Y-m-d H:i:s", filemtime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>Compiled libraries and headers</td></tr>";
+		$libraryName = $dirName . "-libs.zip";
+		$fullPath = resolveFileBelow($downloadRoot, $libraryName);
+		if ($fullPath !== null) {
+			echo "<tr><td><a href=\"" . $baseUrl . "sdk/downloads/" . rawurlencode($libraryName) . "\">" . escapeHtml($libraryName) . "</a></td><td>" . date("Y-m-d H:i:s", filemtime($fullPath)) . "</td><td>" . GetFileSize($fullPath) . " kB</td><td>Compiled libraries and headers</td></tr>";
 		}
-		$pkgDir = $sdkRoot."downloads/".$dirName;
-		if (file_exists($pkgDir)) {
+		$pkgDir = realpath($downloadRoot . DIRECTORY_SEPARATOR . $dirName);
+		$downloadRootPath = realpath($downloadRoot);
+		if ($pkgDir !== false && $downloadRootPath !== false && is_dir($pkgDir)
+            && strncmp($pkgDir, rtrim($downloadRootPath, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR, strlen(rtrim($downloadRootPath, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR)) === 0) {
 			$dir = new DirectoryIterator($pkgDir);
 			foreach ($dir as $fileinfo) {
-	    		if (!$fileinfo->isDot()) {
-	    		    $fullPath = $sdkRoot."downloads/".$dirName."/".$fileinfo->getFilename();
-	    			echo "<tr><td><a href=\"".$baseUrl."sdk/downloads/".$dirName."/".$fileinfo->getFilename()."\">".$fileinfo->getFilename()."</a></td><td>".date("Y-m-d H:i:s", filemtime($fullPath))."</td><td>".GetFileSize($fullPath)." kB</td><td>".GetDescription($fileinfo->getFilename())."</td></tr>";
-	    		}
+				if (!$fileinfo->isDot() && $fileinfo->isFile()) {
+                    $entryName = $fileinfo->getFilename();
+					$fullPath = $fileinfo->getPathname();
+					echo "<tr><td><a href=\"" . $baseUrl . "sdk/downloads/" . rawurlencode($dirName) . "/" . rawurlencode($entryName) . "\">" . escapeHtml($entryName) . "</a></td><td>" . date("Y-m-d H:i:s", filemtime($fullPath)) . "</td><td>" . GetFileSize($fullPath) . " kB</td><td>" . escapeHtml(GetDescription($entryName)) . "</td></tr>";
+				}
 			}
 			echo "</table><p><span class=\"note\">Note:</span> In order to have the bindings work the location of the core components must be included manually in the PATH environment variable.</p>";
 		}
 		else
 			echo "</table>";		
-	}
 }
 function ProcessPackageinfo() { 
 	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
@@ -83,7 +100,7 @@ function ProcessBuildStatus() {
 	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
 }
 function GetRemote($url) { 
-	$result = file_get_contents($url);
+	$result = fetchAllowedRemote($url);
     if ($result == false)
     	$result = "<span style=\"background-color:Gray;color:Black;font-weight:bold\">not available</span>";
     echo $result;
@@ -98,14 +115,20 @@ function ProcessText() {
 function ProcessMSAutotest() { 
 	echo "This page is under construction. Please refer to the <a target=\"_blank\" href=\"https://archive.gisinternals.com/sdk/\">build server page</a> for the status information";
 }
-header('Content-type: application/json');
-if (isset($_GET['callback'])) {
-	echo $_GET['callback'];
-	echo "(";
+$callback = requestString($_GET, 'callback');
+if ($callback !== null && !isValidJsonpCallback($callback)) {
+    http_response_code(400);
+    header('Content-Type: text/plain; charset=UTF-8');
+    die('Invalid callback parameter.');
 }
-echo "{'html': '";
-if (isset($_GET['content']) or die("content parameter missing.")) {
-    switch ($_GET['content']) {
+
+$content = requestString($_GET, 'content');
+if ($content === null) {
+    die("content parameter missing.");
+}
+
+ob_start();
+switch ($content) {
     	case "filelist":
             ProcessFilelist();
             break;
@@ -122,7 +145,11 @@ if (isset($_GET['content']) or die("content parameter missing.")) {
             ProcessBuildStatus();
             break;
         case "getremote":
-            GetRemote($_GET['src']);
+            $source = requestString($_GET, 'src');
+            if ($source === null) {
+                die('src parameter missing.');
+            }
+            GetRemote($source);
             break;
         case "archive":
             ProcessArchive();
@@ -136,10 +163,15 @@ if (isset($_GET['content']) or die("content parameter missing.")) {
         default:
             die("Content not available at server.");
             break;    
-     }
 }
-echo "'}";
-if (isset($_GET['callback'])) {
-	echo ")";
+$html = ob_get_clean();
+$payload = json_encode(array('html' => $html), JSON_UNESCAPED_SLASHES | JSON_INVALID_UTF8_SUBSTITUTE);
+
+if ($callback !== null) {
+    header('Content-Type: application/javascript; charset=UTF-8');
+    echo $callback . '(' . $payload . ')';
+} else {
+    header('Content-Type: application/json; charset=UTF-8');
+    echo $payload;
 }
 ?>
