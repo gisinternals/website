@@ -36,6 +36,8 @@ check(!isAllowedRemoteUrl('http://127.0.0.1/admin'), 'loopback URL should be rej
 check(!isAllowedRemoteUrl('http://169.254.169.254/latest/meta-data'), 'metadata URL should be rejected');
 check(!isAllowedRemoteUrl('https://gisinternals.com.evil.example/'), 'lookalike domain should be rejected');
 check(!isAllowedRemoteUrl('https://user@gisinternals.com/'), 'credential-bearing URL should be rejected');
+check(safePublicHost(array('HTTP_HOST' => 'download.gisinternals.com')) === 'download.gisinternals.com', 'known public host should be retained');
+check(safePublicHost(array('HTTP_HOST' => 'evil.example\"><script>alert(1)</script>')) === 'www.gisinternals.com', 'untrusted Host header should use the safe default');
 
 $temporaryRoot = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'gisinternals-security-' . bin2hex(random_bytes(6));
 mkdir($temporaryRoot);
@@ -73,7 +75,6 @@ list($body) = runEndpoint('getcontent.php', array(
 ), array('HTTP_HOST' => 'evil.example\"><script>alert(1)</script>'));
 check(strpos($body, '<img src=x onerror=alert(1)>') === false, 'file list should HTML-escape the requested name');
 check(strpos($body, 'evil.example') === false, 'file list should not reflect an untrusted Host header');
-check(strpos($body, 'www.gisinternals.com') !== false, 'file list should retain a safe public download host');
 
 list($body) = runEndpoint('getremote.php', array('src' => 'http://127.0.0.1/private'));
 check(strpos($body, 'not available') !== false, 'getremote should block private-network SSRF');
